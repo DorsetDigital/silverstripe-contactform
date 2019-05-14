@@ -1,6 +1,6 @@
 	{
 	  "name": "thomaspaulson/sliverstripe-contactform",
-	  "description": "silverstripe contract form on sidebar",
+	  "description": "Silverstripe contact form",
 	  "type": "silverstripe-vendormodule",
 	  "homepage": "https://github.com/thomaspaulson/silverstripe-contactform",
 	  "keywords": ["silverstripe", "contact-form", "sidebar"],
@@ -13,6 +13,12 @@
 	  },
 	  "require": {
 	    "silverstripe/cms": "^4.0",
-	    "silverstripe/framework": "^4.0"
-	  }
+	    "silverstripe/framework": "^4.0",
+        "silverstripe/vendor-plugin": "^1.0"
+	  },
+      "autoload": {
+        "psr-4": {
+          "ThomasPaulson\\SilverStripe\\ContactForm\\": "src/"
+        }
+      }
 	}	
