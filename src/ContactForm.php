@@ -22,7 +22,6 @@ class ContactForm extends Form
     public function __construct($controller, $name)
     {
         $fields = FieldList::create(
-            HiddenField::create('ReturnURLy', "foo", "bar"),
             CompositeField::create(
                 TextField::create("Name")->setAttribute('placeholder', _t(__CLASS__ . '.YOURNAME', 'Your name'))
                     ->setCustomValidationMessage(_t(__CLASS__ . '.YOURNAME_MESSAGE_REQUIRED', 'Please enter your name'))
@@ -51,7 +50,7 @@ class ContactForm extends Form
 
 
         $actions = FieldList::create(
-            FormAction::create("doPostContact", _t(__CLASS__ . '.POST', 'Post'))
+            FormAction::create("doPostContact", _t(__CLASS__ . '.POST', 'Send'))
         );
 
         $required = RequiredFields::create([
@@ -86,8 +85,4 @@ class ContactForm extends Form
     }
 
 
-    public function forTemplate()
-    {
-        return $this->renderWith(['DorsetDigital/SilverStripe/ContactForm/ContactForm', 'Form']);
-    }
 }

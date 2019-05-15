@@ -5,13 +5,14 @@ namespace DorsetDigital\SilverStripe\ContactForm;
 use SilverStripe\Control\Controller;
 use SilverStripe\Control\Director;
 use SilverStripe\Control\HTTPRequest;
+use SilverStripe\Core\Extension;
 use SilverStripe\Core\Injector\Injector;
 use SilverStripe\ORM\FieldType\DBField;
 use SilverStripe\Security\Security;
 use SilverStripe\SiteConfig\SiteConfig;
 use SilverStripe\View\Requirements;
 
-class ControllerExtension extends Controller
+class ControllerExtension extends Extension
 {
 
     private static $allowed_actions = [
@@ -20,7 +21,7 @@ class ControllerExtension extends Controller
 
     public function ContactForm()
     {
-        $form = new ContactForm($this, 'ContactForm');
+        $form = new ContactForm(Controller::curr(), 'ContactForm');
         if ($form->hasExtension('SilverStripe\SpamProtection\Extension\FormSpamProtectionExtension')) {
             $form->enableSpamProtection();
         }
