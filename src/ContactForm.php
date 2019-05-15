@@ -1,6 +1,6 @@
 <?php
 
-namespace ThomasPaulson\SilverStripe\ContactForm;
+namespace DorsetDigital\SilverStripe\ContactForm;
 
 use SilverStripe\Control\Controller;
 use SilverStripe\Control\Email\Email;
@@ -74,7 +74,7 @@ class ContactForm extends Form
         $email->setFrom($config->MailFrom);
         $email->setTo($config->MailTo);
         $email->setReplyTo($data['Email']);
-        $email->setHTMLTemplate('ThomasPaulson/SilverStripe/ContactForm/ContactEmail');
+        $email->setHTMLTemplate('DorsetDigital/SilverStripe/ContactForm/ContactEmail');
         $email->setData($data);
         $email->send();
 
@@ -88,6 +88,6 @@ class ContactForm extends Form
 
     public function forTemplate()
     {
-        return $this->renderWith(['ThomasPaulson/SilverStripe/ContactForm/ContactForm', 'Form']);
+        return $this->renderWith(['DorsetDigital/SilverStripe/ContactForm/ContactForm', 'Form']);
     }
 }

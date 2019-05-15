@@ -1,6 +1,6 @@
 <?php
 
-namespace ThomasPaulson\SilverStripe\ContactForm;
+namespace DorsetDigital\SilverStripe\ContactForm;
 
 use SilverStripe\Control\Controller;
 use SilverStripe\Control\Director;
@@ -11,10 +11,8 @@ use SilverStripe\Security\Security;
 use SilverStripe\SiteConfig\SiteConfig;
 use SilverStripe\View\Requirements;
 
-class ContactController extends Controller
+class ControllerExtension extends Controller
 {
-
-    private static $url_segment = 'contactform';
 
     private static $allowed_actions = [
         'ContactForm'
@@ -23,7 +21,6 @@ class ContactController extends Controller
     public function ContactForm()
     {
         $form = new ContactForm($this, 'ContactForm');
-        $form->enableSpamProtection();
         if ($form->hasExtension('SilverStripe\SpamProtection\Extension\FormSpamProtectionExtension')) {
             $form->enableSpamProtection();
         }

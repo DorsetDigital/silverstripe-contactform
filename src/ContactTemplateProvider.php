@@ -1,6 +1,6 @@
 <?php
 
-namespace ThomasPaulson\SilverStripe\ContactForm;
+namespace DorsetDigital\SilverStripe\ContactForm;
 
 use SilverStripe\View\ArrayData;
 use SilverStripe\View\SSViewer;
@@ -8,10 +8,6 @@ use SilverStripe\View\TemplateGlobalProvider;
 
 class ContactTemplateProvider implements TemplateGlobalProvider
 {
-
-    /**
-     * @return array|void
-     */
     public static function get_template_global_variables()
     {
         return [
@@ -21,8 +17,8 @@ class ContactTemplateProvider implements TemplateGlobalProvider
 
     public static function ContactFormFunction()
     {
-        $template = SSViewer::create('ThomasPaulson/SilverStripe/ContactForm/ContactTemplateProvider');
-        $controller = new ContactController();
+        $template = SSViewer::create('DorsetDigital/SilverStripe/ContactForm/ContactTemplateProvider');
+        $controller = new ControllerExtension();
         $form = $controller->ContactForm();
 
         return $template->process(ArrayData::create([

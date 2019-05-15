@@ -1,24 +1,27 @@
-	{
-	  "name": "thomaspaulson/silverstripe-contactform",
-	  "description": "Silverstripe contact form",
-	  "type": "silverstripe-vendormodule",
-	  "homepage": "https://github.com/thomaspaulson/silverstripe-contactform",
-	  "keywords": ["silverstripe", "contact-form", "sidebar"],
-	  "license": "BSD-3-Clause",
-	  "authors": [
-	    {"name": "thomas paulson","email": "thomas.paulson@hotmail.com"}
-	  ],
-	  "support": {
-	    "issues": "https://github.com/thomaspaulson/silverstripe-contactform/issues"
-	  },
-	  "require": {
-	    "silverstripe/cms": "^4.0",
-	    "silverstripe/framework": "^4.0",
-        "silverstripe/vendor-plugin": "^1.0"
-	  },
-      "autoload": {
-        "psr-4": {
-          "ThomasPaulson\\SilverStripe\\ContactForm\\": "src/"
-        }
-      }
-	}	
+{
+  "name": "dorsetdigital/silverstripe-contactform",
+  "description": "Silverstripe contact form",
+  "type": "silverstripe-vendormodule",
+  "homepage": "https://github.com/DorsetDigital/silverstripe-contactform",
+  "keywords": [
+    "silverstripe",
+    "contact-form"
+  ],
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Tim Burt",
+      "email": "tim@dorset-digital.net"
+    }
+  ],
+  "require": {
+    "silverstripe/cms": "^4.0",
+    "silverstripe/framework": "^4.0",
+    "silverstripe/vendor-plugin": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "DorsetDigital\\SilverStripe\\ContactForm\\": "src/"
+    }
+  }
+}

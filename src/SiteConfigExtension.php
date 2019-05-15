@@ -1,13 +1,13 @@
 <?php
 
-namespace ThomasPaulson\SilverStripe\ContactForm;
+namespace DorsetDigital\SilverStripe\ContactForm;
 
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Forms\TextField;
 use SilverStripe\ORM\DataExtension;
 
-class ContactSiteConfig extends DataExtension
+class SiteConfigExtension extends DataExtension
 {
 
     private static $db = [

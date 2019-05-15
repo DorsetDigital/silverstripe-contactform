@@ -1,3 +1,7 @@
 SilverStripe\SiteConfig\SiteConfig:
   extensions:
-    - ThomasPaulson\SilverStripe\ContactForm\ContactSiteConfig
+    - DorsetDigital\SilverStripe\ContactForm\SiteConfigExtension
+
+PageController:
+  extensions:
+    - DorsetDigital\SilverStripe\ContactForm\ControllerExtension

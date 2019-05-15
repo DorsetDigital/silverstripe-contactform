@@ -1,9 +1,0 @@
----
-Name: contactroutes
-After:
-  - '#rootroutes'
-  - '#coreroutes'
----
-SilverStripe\Control\Director:
-  rules:
-    'contactform': 'ThomasPaulson\SilverStripe\ContactForm\ContactController'
